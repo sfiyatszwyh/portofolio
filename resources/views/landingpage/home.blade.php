@@ -99,7 +99,7 @@
                         Welcome To SofiBook
                       </h1>
                       <p>
-                        Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
+                       Temukan berbagai koleksi buku menarik yang siap menemani hari-hari Anda. Dapatkan diskon spesial dan promo menarik setiap minggunya. Nikmati pengalaman berbelanja buku yang mudah, cepat, dan terpercaya. Jangan lewatkan kesempatan untuk menambah koleksi buku favorit Anda sekarang juga!
                       </p>
                       <a href="">
                         Contact Us
@@ -123,7 +123,7 @@
                         Welcome To SofiBook
                       </h1>
                       <p>
-                        Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
+                       Temukan berbagai koleksi buku menarik yang siap menemani hari-hari Anda. Dapatkan diskon spesial dan promo menarik setiap minggunya. Nikmati pengalaman berbelanja buku yang mudah, cepat, dan terpercaya. Jangan lewatkan kesempatan untuk menambah koleksi buku favorit Anda sekarang juga!
                       </p>
                       <a href="">
                         Contact Us
@@ -147,7 +147,7 @@
                         Welcome To SofiBook
                       </h1>
                       <p>
-                        Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
+                       Temukan berbagai koleksi buku menarik yang siap menemani hari-hari Anda. Dapatkan diskon spesial dan promo menarik setiap minggunya. Nikmati pengalaman berbelanja buku yang mudah, cepat, dan terpercaya. Jangan lewatkan kesempatan untuk menambah koleksi buku favorit Anda sekarang juga!
                       </p>
                       <a href="">
                         Contact Us
@@ -203,9 +203,9 @@
                   Cerita Rakyat 
                 </h6>
                 <h6>
-                  Price
+                  Harga
                   <span>
-                    $200
+                    50.000
                   </span>
                 </h6>
               </div>
@@ -228,9 +228,9 @@
                   Fabel Al-Qur'an
                 </h6>
                 <h6>
-                  Price
+                  Harga
                   <span>
-                    $300
+                    90.000
                   </span>
                 </h6>
               </div>
@@ -253,9 +253,9 @@
                  Dongeng Dunia 
                 </h6>
                 <h6>
-                  Price
+                  Harga
                   <span>
-                    $110
+                    60.000
                   </span>
                 </h6>
               </div>
@@ -278,9 +278,9 @@
                   Nabi dan Rasul
                 </h6>
                 <h6>
-                  Price
+                  Harga
                   <span>
-                    $45
+                    80.000
                   </span>
                 </h6>
               </div>
@@ -303,9 +303,9 @@
                  Dunia Peri
                 </h6>
                 <h6>
-                  Price
+                  Harga
                   <span>
-                    $95
+                    70.000
                   </span>
                 </h6>
               </div>
@@ -328,9 +328,9 @@
                   Negeri Seribu
                 </h6>
                 <h6>
-                  Price
+                  Harga
                   <span>
-                    $70
+                    90.000
                   </span>
                 </h6>
               </div>
@@ -353,9 +353,9 @@
                  Love Letter
                 </h6>
                 <h6>
-                  Price
+                  Harga
                   <span>
-                    $400
+                    50.000
                   </span>
                 </h6>
               </div>
@@ -375,12 +375,12 @@
               </div>
               <div class="detail-box">
                 <h6>
-                  Fabel Nusantara
+                  Nusantara
                 </h6>
                 <h6>
-                  Price
+                  Harga
                   <span>
-                    $450
+                    80.000
                   </span>
                 </h6>
               </div>
@@ -422,7 +422,7 @@
                 </h2>
               </div>
               <p>
-                Qui ex dolore at repellat, quia neque doloribus omnis adipisci, ipsum eos odio fugit ut eveniet blanditiis praesentium totam non nostrum dignissimos nihil eius facere et eaque. Qui, animi obcaecati.
+                Berbelanja buku kini lebih mudah dan cepat. Temukan dan dapatkan buku favorit Anda di sini! Temukan berbagai buku dari penulis terkenal di SofiBook.
               </p>
               <div class="btn-box">
                 <a href="#" class="btn1">
@@ -545,7 +545,7 @@
                 Fast Delivery
               </h5>
               <p>
-                variations of passages of Lorem Ipsum available
+                Pengiriman cepat, buku segera tiba di hadapan anda!
               </p>
             </div>
           </div>
@@ -660,7 +660,7 @@
                 Free Shiping
               </h5>
               <p>
-                variations of passages of Lorem Ipsum available
+                Nikmati gratis ongkir untuk semua pesanan Anda!
               </p>
             </div>
           </div>
@@ -681,7 +681,7 @@
                 Best Quality
               </h5>
               <p>
-                variations of passages of Lorem Ipsum available
+                Buku berkualitas tinggi untuk pengalaman membaca terbaik.
               </p>
             </div>
           </div>
@@ -715,7 +715,7 @@
                 </h2>
               </div>
               <p>
-                Omnis ex nam laudantium odit illum harum, excepturi accusamus at corrupti, velit blanditiis unde perspiciatis, vitae minus culpa? Beatae at aut consequuntur porro adipisci aliquam eaque iste ducimus expedita accusantium?
+                Kami menyediakan pilihan buku yang sempurna untuk setiap kesempatan istimewa dalam hidup Anda. Temukan inspirasi dan kebahagiaan melalui kata-kata yang indah di halaman-halaman buku kami.
               </p>
               <div class="btn-box">
                 <a href="#" class="btn1">
@@ -808,7 +808,7 @@
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </div>
               <p>
-                editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
+                Saya sangat senang berbelanja di Toko Buku ini! Mereka memiliki koleksi buku yang lengkap dan beragam, dari karya-karya terbaru hingga klasik yang langka. Pelayanan stafnya ramah dan sangat membantu. Setiap kunjungan selalu membuat saya menemukan buku yang sesuai dengan minat saya.
               </p>
             </div>
           </div>
@@ -826,7 +826,7 @@
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </div>
               <p>
-                Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                Pengalaman belanja di Toko Buku ini menyenangkan. Harga buku mereka kompetitif dengan diskon menarik. Organisasi toko yang baik membuat saya mudah menemukan buku yang saya cari. Stafnya juga profesional, siap membantu dengan pertanyaan atau rekomendasi.
               </p>
             </div>
           </div>
@@ -844,7 +844,7 @@
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </div>
               <p>
-                Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy, editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
+                Toko Buku ini tempat yang tepat untuk mencari hadiah buku spesial. Koleksi buku mereka beragam, dari buku-buku populer hingga yang niche. Stafnya membantu saya menemukan buku yang tepat untuk hadiah, dengan pelayanan yang memuaskan setiap kali berkunjung.
               </p>
             </div>
           </div>
@@ -891,7 +891,7 @@
               ABOUT US
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
+              Kami Toko Buku terbaik, menyediakan buku terbaru dan klasik, hadiah spesial, dengan pelayanan ramah dan profesional.
             </p>
           </div>
           <div class="col-md-6 col-lg-3">
@@ -912,7 +912,7 @@
               NEED HELP
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
+            Apakah Anda memerlukan bantuan? Kami siap membantu dengan pertanyaan atau rekomendasi buku yang tepat untuk Anda.
             </p>
           </div>
           <div class="col-md-6 col-lg-3">
@@ -922,7 +922,7 @@
             <div class="info_link-box">
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span> Gb road 123 london Uk </span>
+                <span> Jawa Timur, IDN </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>

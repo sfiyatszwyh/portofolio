@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\LoginController;
 
 /*
@@ -17,11 +18,23 @@ use App\Http\Controllers\LoginController;
 Route::get('/', function () {
     return view('landingpage.home');
 });
-
 Route::group(["middleware" => ["auth", 'cekrole:admin']], function(){
     Route::get('/dashboard', function () {
         return view('dashboard.index');
     })->name('dashboard');
+
+    Route::get('/data', [BookController::class, 'index'])->name('data');
+
+    Route::get('/tambah', function () {
+        return view('dashboard.tambah');
+    })->name('tambah');
+   
+    Route::post('/tambah', [BookController::class, 'store'])->name('book.store');
+
+    Route::get('/edit/{id}', [BookController::class, 'edit'])->name('edit-book');
+    Route::put('/update/{id}', [BookController::class, 'update'])->name('update-book');
+
+    Route::delete('/delete/{id}', [BookController::class, 'destroy'])->name('delete-book');
 });
 
 Route::get('/login', function () {
