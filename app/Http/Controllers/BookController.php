@@ -14,7 +14,7 @@ class BookController extends Controller
         // Validasi data
         $request->validate([
             'judul_buku' => 'required|string|max:255',
-            'harga' => 'required|numeric',
+            'harga' => 'required|integer',
             'stok' => 'required|integer',
             'produk' => 'required|file|max:1024',
         ]);
@@ -49,7 +49,7 @@ class BookController extends Controller
         // Validate data
         $request->validate([
             'judul_buku' => 'required|string|max:255',
-            'harga' => 'required|numeric',
+            'harga' => 'required|integer',
             'stok' => 'required|integer',
             'produk' => 'nullable|file|max:1024',
         ]);

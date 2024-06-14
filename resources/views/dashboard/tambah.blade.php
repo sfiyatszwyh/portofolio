@@ -90,18 +90,8 @@
             </a>
           </li>
           <li>
-            <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Form Layouts</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-editors.html">
-              <i class="bi bi-circle"></i><span>Form Editors</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-validation.html">
-              <i class="bi bi-circle"></i><span>Form Validation</span>
+            <a href="{{ route('kategori') }}">
+              <i class="bi bi-circle"></i><span>Kategori Buku</span>
             </a>
           </li>
         </ul>
@@ -109,8 +99,8 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-register.html">
-          <i class="bi bi-card-list"></i>
-          <span>Register</span>
+          <i class="bi bi-bag-check-fill"></i>
+          <span>Pembelian</span>
         </a>
       </li><!-- End Register Page Nav -->
 

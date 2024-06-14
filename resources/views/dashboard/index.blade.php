@@ -90,18 +90,8 @@
             </a>
           </li>
           <li>
-            <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Form Layouts</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-editors.html">
-              <i class="bi bi-circle"></i><span>Form Editors</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-validation.html">
-              <i class="bi bi-circle"></i><span>Form Validation</span>
+            <a href="{{ route('kategori') }}">
+              <i class="bi bi-circle"></i><span>Kategori Buku</span>
             </a>
           </li>
         </ul>
@@ -109,8 +99,8 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-register.html">
-          <i class="bi bi-card-list"></i>
-          <span>Register</span>
+          <i class="bi bi-bag-check-fill"></i>
+          <span>Pembelian</span>
         </a>
       </li><!-- End Register Page Nav -->
 
@@ -134,6 +124,70 @@
         </ol>
       </nav>
     </div><!-- End Page Title -->
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg-12">
+          <div class="row">
+
+            <!-- Sales Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Penjualan</h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-cart"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>145</h6>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Sales Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card customers-card">
+              <div class="card-body">
+                <h5 class="card-title">Admin</span></h5>
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-people"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>1</h6>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+
+            <!-- Customers Card -->
+            <div class="col-xxl-4 col-xl-12">
+
+              <!-- Revenue Card -->
+              <div class="card info-card revenue-card">
+                <div class="card-body">
+                  <h5 class="card-title">Pemasukan</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>500000000</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Customers Card -->
+          </div>
+        </div>
+      </div>
+    </section>
   </main><!-- End #main -->
 
  

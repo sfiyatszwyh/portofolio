@@ -65,7 +65,7 @@
       </ul>
     </nav><!-- End Icons Navigation -->
 
-  </header><!-- End Header -->
+  </header><!-- End Header --><!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
@@ -90,18 +90,8 @@
             </a>
           </li>
           <li>
-            <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Form Layouts</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-editors.html">
-              <i class="bi bi-circle"></i><span>Form Editors</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-validation.html">
-              <i class="bi bi-circle"></i><span>Form Validation</span>
+            <a href="{{ route('kategori') }}">
+              <i class="bi bi-circle"></i><span>Kategori Buku</span>
             </a>
           </li>
         </ul>
@@ -109,8 +99,8 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-register.html">
-          <i class="bi bi-card-list"></i>
-          <span>Register</span>
+          <i class="bi bi-bag-check-fill"></i>
+          <span>Pembelian</span>
         </a>
       </li><!-- End Register Page Nav -->
 
@@ -140,7 +130,6 @@
     <section class="section">
         <div class="row">
           <div class="col-lg-12">
-      
             <div class="card">
               <div class="card-body pt-3 ">
                 <div class="d-flex align-items-center justify-content-between m-3">
@@ -150,69 +139,73 @@
                         Tambah</button></a>
                 </div>
                 <!-- Table with stripped rows -->
-                <table class="table datatable datatable-table">
-                  <thead>
-                    <tr>
-                      <th data-sortable="true" >
-                        <button class="datatable-sorter">
-                            No.  
-                        </button>
-                      </th>
-                      <th data-sortable="true" >
-                        <button class="datatable-sorter">
-                            Judul  
-                        </button>
-                      </th>
-                      <th data-sortable="true" >
-                        <button class="datatable-sorter">
-                            Produk 
-                        </button>
-                      </th>
-                      <th data-sortable="true" >
-                        <button class="datatable-sorter">
-                            Stok 
-                        </button>
-                      </th>
-                      <th data-sortable="true" >
-                        <button class="datatable-sorter">
-                            Harga
-                        </button>
-                      </th>
-                      <th data-sortable="true" >
-                        <button class="datatable-sorter">
-                            Aksi
-                        </button>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
+                <div class="table-responsive">
+
+                  <table class="table datatable datatable-table">
+                    <thead>
+                      <tr>
+                        <th data-sortable="true" >
+                          <button class="datatable-sorter">
+                              No.  
+                          </button>
+                        </th>
+                        <th data-sortable="true" >
+                          <button class="datatable-sorter">
+                              Judul  
+                          </button>
+                        </th>
+                        <th data-sortable="true" >
+                          <button class="datatable-sorter">
+                              Produk 
+                          </button>
+                        </th>
+                        <th data-sortable="true" >
+                          <button class="datatable-sorter">
+                              Stok 
+                          </button>
+                        </th>
+                        <th data-sortable="true" >
+                          <button class="datatable-sorter">
+                              Harga
+                          </button>
+                        </th>
+                        <th data-sortable="true" >
+                          <button class="datatable-sorter">
+                              Aksi
+                          </button>
+                        </th>
+                      </tr>
+                    </thead>
                     <tbody>
-                        @forelse ($books as $book)
-                            <tr>
-                                <td>{{ $loop->iteration }}</td>
-                                <td>{{ $book->judul_buku }}</td>
-                                <td><img src="{{ Storage::url($book->produk) }}" alt="Produk Image" style="max-width: 100px; max-height: 100px;">
-                                </td>
-                                <td>{{ $book->stok }}</td>
-                                <td>{{ $book->harga }}</td>
-                                <td>
-                                    <!-- Example action buttons -->
-                                    <a href="{{ route('edit-book', $book->id) }}" class="btn btn-sm btn-primary">Edit</a>
-                                    <form action="{{ route('delete-book', $book->id) }}" method="POST" style="display:inline-block;">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @empty
-                            <tr>
-                                <td colspan="6" class="text-center">No entries found</td>
-                            </tr>
-                        @endforelse
+                      <tbody>
+                          @forelse ($books as $book)
+                              <tr>
+                                  <td>{{ $loop->iteration }}</td>
+                                  <td>{{ $book->judul_buku }}</td>
+                                  <td><img src="{{ Storage::url($book->produk) }}" alt="Produk Image" style="max-width: 100px; max-height: 100px;">
+                                  </td>
+                                  <td>{{ $book->stok }}</td>
+                                  <td>{{ $book->harga }}</td>
+                                  <td>
+                                      <!-- Example action buttons -->
+                                      <a href="{{ route('edit-book', $book->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                      <form action="{{ route('delete-book', $book->id) }}" method="POST" style="display:inline-block;">
+                                          @csrf
+                                          @method('DELETE')
+                                          <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                      </form>
+                                  </td>
+                              </tr>
+                          @empty
+                              <tr>
+                                  <td colspan="6" class="text-center">No entries found</td>
+                              </tr>
+                          @endforelse
+                      </tbody>
                     </tbody>
-                  </tbody>
-                </table>
+                  </table>
+                  
+                  </div>
                 <!-- End Table with stripped rows -->
       
               </div>
@@ -227,18 +220,18 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/chart.js/chart.umd.js"></script>
-  <script src="assets/vendor/echarts/echarts.min.js"></script>
-  <script src="assets/vendor/quill/quill.js"></script>
-  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
+  <script src="{{ asset('template/assets/vendor/apexcharts/apexcharts.min.js') }}"></script>
+  <script src="{{ asset('template/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('template/assets/vendor/chart.js/chart.umd.js') }}"></script>
+  <script src="{{ asset('template/assets/vendor/echarts/echarts.min.js') }}"></script>
+  <script src="{{ asset('template/assets/vendor/quill/quill.js') }}"></script>
+  <script src="{{ asset('template/assets/vendor/simple-datatables/simple-datatables.js') }}"></script>
+  <script src="{{ asset('template/assets/vendor/tinymce/tinymce.min.js') }}"></script>
+  <script src="{{ asset('template/assets/vendor/php-email-form/validate.js') }}"></script>
+  
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="{{ asset('template/assets/js/main.js') }}"></script>
+  
 </body>
 
 </html>

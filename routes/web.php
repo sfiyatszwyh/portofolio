@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,19 +23,21 @@ Route::group(["middleware" => ["auth", 'cekrole:admin']], function(){
     Route::get('/dashboard', function () {
         return view('dashboard.index');
     })->name('dashboard');
-
+   
     Route::get('/data', [BookController::class, 'index'])->name('data');
-
     Route::get('/tambah', function () {
         return view('dashboard.tambah');
     })->name('tambah');
-   
     Route::post('/tambah', [BookController::class, 'store'])->name('book.store');
-
     Route::get('/edit/{id}', [BookController::class, 'edit'])->name('edit-book');
     Route::put('/update/{id}', [BookController::class, 'update'])->name('update-book');
-
     Route::delete('/delete/{id}', [BookController::class, 'destroy'])->name('delete-book');
+
+    Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori');
+    Route::post('/kategori/tambah', [KategoriController::class, 'store'])->name('tambahkategori');
+    Route::get('/kategori/{id}/edit', [KategoriController::class, 'edit'])->name('editkategori');
+    Route::put('/kategori/{id}/edit', [KategoriController::class, 'update'])->name('updatekategori');
+    Route::delete('/kategori/{id}', [KategoriController::class, 'destroy'])->name('hapuskategori');
 });
 
 Route::get('/login', function () {
