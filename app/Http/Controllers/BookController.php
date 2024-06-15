@@ -32,7 +32,7 @@ class BookController extends Controller
         $book->stok = $request->stok;
 
         if ($request->hasFile('produk')) {
-            $book->produk = $request->file('produk')->store('public/buku');
+            $book->produk = $request->file('produk')->store('buku','public');
         }
 
         $book->save();
@@ -72,7 +72,7 @@ class BookController extends Controller
                 Storage::delete($book->produk);
             }
             // Store new file
-            $book->produk = $request->file('produk')->store('public/buku');
+            $book->produk = $request->file('produk')->store('buku','public');
         }
 
         $book->save();
