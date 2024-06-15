@@ -16,9 +16,9 @@ use App\Http\Controllers\KategoriController;
 |
 */
 
-Route::get('/', function () {
-    return view('landingpage.home');
-});
+
+Route::get('/', [BookController::class, 'showBooks'])->name('home');
+
 Route::group(["middleware" => ["auth", 'cekrole:admin']], function(){
     Route::get('/dashboard', function () {
         return view('dashboard.index');
@@ -38,6 +38,9 @@ Route::group(["middleware" => ["auth", 'cekrole:admin']], function(){
     Route::get('/kategori/{id}/edit', [KategoriController::class, 'edit'])->name('editkategori');
     Route::put('/kategori/{id}/edit', [KategoriController::class, 'update'])->name('updatekategori');
     Route::delete('/kategori/{id}', [KategoriController::class, 'destroy'])->name('hapuskategori');
+
+
+    
 });
 
 Route::get('/login', function () {
@@ -50,5 +53,7 @@ Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
 
-
+Route::get('/pembelian', function () {
+    return view('landingpage.pembelian');
+})->name('pembelian')->middleware('auth');
 

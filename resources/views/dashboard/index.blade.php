@@ -100,7 +100,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-register.html">
           <i class="bi bi-bag-check-fill"></i>
-          <span>Pembelian</span>
+          <span> Informasi Pembelian</span>
         </a>
       </li><!-- End Register Page Nav -->
 

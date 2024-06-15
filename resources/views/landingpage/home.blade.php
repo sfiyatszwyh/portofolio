@@ -191,213 +191,66 @@
           Products
         </h2>
       </div>
-      <div class="row">
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="{{ asset('home/images/b1.png') }}" alt="Product Image" />
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Cerita Rakyat 
-                </h6>
-                <h6>
-                  Harga
-                  <span>
-                    50.000
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
+      @auth
+  <div class="row">
+    @foreach($books as $book)
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="box">
+            <a href="{{ route('pembelian') }}">
+                <div class="img-box">
+                  <img src="{{ Storage::url($book->produk) }}" alt="Product Image"></a>
+                </div>
+                <div class="detail-box">
+                    <h6>{{ $book->judul_buku }}</h6>
+                    <h6>
+                        Harga
+                        <span>{{ number_format($book->harga, 0, ',', '.') }}</span>
+                    </h6>
+                </div>
+                <div class="new">
+                    <span>New</span>
+                </div>
             </a>
-          </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="{{ asset('home/images/b2.png') }}" alt="Product Image" />
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Fabel Al-Qur'an
-                </h6>
-                <h6>
-                  Harga
-                  <span>
-                    90.000
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
+    </div>
+    @endforeach
+</div>
+@else
+<div class="row">
+    @foreach($books as $book)
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="box">
+            <a href="{{ route('login') }}">
+                <div class="img-box">
+                  <img src="{{ Storage::url($book->produk) }}" alt="Product Image"></a>
+                </div>
+                <div class="detail-box">
+                    <h6>{{ $book->judul_buku }}</h6>
+                    <h6>
+                        Harga
+                        <span>{{ number_format($book->harga, 0, ',', '.') }}</span>
+                    </h6>
+                </div>
+                <div class="new">
+                    <span>New</span>
+                </div>
             </a>
-          </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="{{ asset('home/images/b3.png') }}" alt="Product Image" />
-              </div>
-              <div class="detail-box">
-                <h6>
-                 Dongeng Dunia 
-                </h6>
-                <h6>
-                  Harga
-                  <span>
-                    60.000
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="{{ asset('home/images/b4.png') }}" alt="Product Image" />
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Nabi dan Rasul
-                </h6>
-                <h6>
-                  Harga
-                  <span>
-                    80.000
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="{{ asset('home/images/b5.png') }}" alt="Product Image" />
-              </div>
-              <div class="detail-box">
-                <h6>
-                 Dunia Peri
-                </h6>
-                <h6>
-                  Harga
-                  <span>
-                    70.000
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="{{ asset('home/images/b6.png') }}" alt="Product Image" />
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Negeri Seribu
-                </h6>
-                <h6>
-                  Harga
-                  <span>
-                    90.000
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="{{ asset('home/images/b7.png') }}" alt="Product Image" />
-              </div>
-              <div class="detail-box">
-                <h6>
-                 Love Letter
-                </h6>
-                <h6>
-                  Harga
-                  <span>
-                    50.000
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="{{ asset('home/images/b8.png') }}" alt="Product Image" />
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Nusantara
-                </h6>
-                <h6>
-                  Harga
-                  <span>
-                    80.000
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
+    </div>
+    @endforeach
+</div>
+@endauth
+
       <div class="btn-box">
-        <a href="">
-          View All Products
-        </a>
-      </div>
+        @auth
+              Selamat Berbelanja
+        @else
+            <a href="{{ route('login') }}">
+              Belanja Sekarang
+            </a>
+        @endauth
+    </div>
+    
     </div>
   </section>
 
@@ -424,14 +277,6 @@
               <p>
                 Berbelanja buku kini lebih mudah dan cepat. Temukan dan dapatkan buku favorit Anda di sini! Temukan berbagai buku dari penulis terkenal di SofiBook.
               </p>
-              <div class="btn-box">
-                <a href="#" class="btn1">
-                  Buy Now
-                </a>
-                <a href="#" class="btn2">
-                  See More
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -717,14 +562,6 @@
               <p>
                 Kami menyediakan pilihan buku yang sempurna untuk setiap kesempatan istimewa dalam hidup Anda. Temukan inspirasi dan kebahagiaan melalui kata-kata yang indah di halaman-halaman buku kami.
               </p>
-              <div class="btn-box">
-                <a href="#" class="btn1">
-                  Buy Now
-                </a>
-                <a href="#" class="btn2">
-                  See More
-                </a>
-              </div>
             </div>
           </div>
         </div>
