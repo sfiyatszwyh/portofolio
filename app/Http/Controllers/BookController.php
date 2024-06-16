@@ -24,7 +24,7 @@ class BookController extends Controller
             'stok' => 'required|integer',
             'produk' => 'required|file|max:1024',
         ]);
-
+        
         // Simpan data buku
         $book = new Book();
         $book->judul_buku = $request->judul_buku;
@@ -32,7 +32,7 @@ class BookController extends Controller
         $book->stok = $request->stok;
 
         if ($request->hasFile('produk')) {
-            $book->produk = $request->file('produk')->store('buku','public');
+            $book->produk = $request->file('produk')->store('public/buku');
         }
 
         $book->save();
@@ -72,7 +72,7 @@ class BookController extends Controller
                 Storage::delete($book->produk);
             }
             // Store new file
-            $book->produk = $request->file('produk')->store('buku','public');
+            $book->produk = $request->file('produk')->store('public/buku');
         }
 
         $book->save();
