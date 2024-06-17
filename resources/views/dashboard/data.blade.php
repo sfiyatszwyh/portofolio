@@ -182,7 +182,7 @@
                               <tr>
                                   <td>{{ $loop->iteration }}</td>
                                   <td>{{ $book->judul_buku }}</td>
-                                  <td><img src="{{ Storage::url($book->produk) }}" alt="Produk Image" style="max-width: 100px; max-height: 100px;">
+                                  <td><img src="{{ asset('storage' . $book->produk) }}" alt="Produk Image" style="max-width: 100px; max-height: 100px;">
                                   </td>
                                   <td>{{ $book->stok }}</td>
                                   <td>{{ $book->harga }}</td>
