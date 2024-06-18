@@ -48,26 +48,26 @@
     
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
                   <a class="nav-link" href="#shop">
                     Shop
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#why">
+                  <a class="nav-link" href="/">
                     Why Us
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#testi">
+                  <a class="nav-link" href="/">
                     Testimonial
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#contact">Contact Us</a>
+                  <a class="nav-link" href="/">Contact Us</a>
                 </li>
               </ul>
               @if (empty(auth()->user()))
@@ -116,12 +116,7 @@
                                                         <tr>
                                                             <th>Terjual</th>
                                                             <td style="width: 75px; text-align:center">:</td>
-                                                            <td>{{ $book->terjual }} produk</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Kategori Produk</th>
-                                                            <td style="width: 75px; text-align:center">:</td>
-                                                            <td>{{ $book->kategori }}</td>
+                                                            <td>{{ $book->terjual }} 27 produk</td>
                                                         </tr>
                                                     </table>
                                                     <div class="d-flex justify-content-center align-items-center">
@@ -146,8 +141,13 @@
                                                                 <div class="row">
                                                                     <div class="col-md-12 mb-3">
                                                                         <label for="jumlah" class="form-label fw-bold">Jumlah</label>
-                                                                        <input type="number" name="jumlah" min="0" max="{{ $book->stok }}" id="jumlah" class="form-control shadow-none" value="" placeholder="tersedia {{ $book->stok }} item" oninput="calculateTotal()">
+                                                                        <input type="number" name="jumlah" id="jumlah" class="form-control shadow-none" placeholder="tersedia {{ $book->stok }} item"
+                                                                               required min="1" max="{{ $book->stok }}" oninput="calculateTotal()">
+                                                                        <div class="invalid-feedback">
+                                                                            Mohon masukkan jumlah yang valid (antara 1 dan {{ $book->stok }}).
+                                                                        </div>
                                                                     </div>
+                                                                    
                                                                     <div class="col-md-6 mb-3">
                                                                         <label class="form-label fw-bold">Total</label>
                                                                         <input type="number" name="total" id="total" class="form-control shadow-none" readonly value="">
@@ -162,7 +162,7 @@
                                                                     </div>
                                                                     <div class="col-md-12 mb-3">
                                                                         <label for="metode_pembayaran" class="form-label fw-bold">Metode Pembayaran</label>
-                                                                        <select class="form-select" aria-label="Default select example" name="metode_pembayaran">
+                                                                        <select class="form-select" aria-label="Default select example" name="metode_pembayaran"  required>
                                                                             <option selected disabled>Pilih Metode Pembayaran</option>
                                                                             <option value="BRI">BRI</option>
                                                                             <option value="BCA">BCA</option>
