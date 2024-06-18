@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\PembelianController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,7 +54,6 @@ Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
 
-Route::get('/pembelian', function () {
-    return view('landingpage.pembelian');
-})->name('pembelian')->middleware('auth');
-
+Route::get('/pembelian/{id}', [PembelianController::class, 'pembelian'])
+    ->name('pembelian')
+    ->middleware('auth');

@@ -186,74 +186,71 @@
 
   <section id="shop" class="shop_section layout_padding">
     <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Products
-        </h2>
-      </div>
-      @auth
-      <div class="row">
-        @foreach($books as $book)
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="box">
-                <a href="{{ route('pembelian') }}">
-                    <div class="img-box">
-                      <img src="{{ asset($book->produk) }}" alt="Product Image"></a>
-                    </div>
-                    <div class="detail-box">
-                        <h6>{{ $book->judul_buku }}</h6>
-                        <h6>
-                            Harga
-                            <span>{{ number_format($book->harga, 0, ',', '.') }}</span>
-                        </h6>
-                    </div>
-                    <div class="new">
-                        <span>New</span>
-                    </div>
-                </a>
-            </div>
+        <div class="heading_container heading_center">
+            <h2>Products</h2>
         </div>
-        @endforeach
-    </div>
-    @else
-    <div class="row">
-        @foreach($books as $book)
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="box">
-                <a href="{{ route('login') }}">
-                    <div class="img-box">
-                      <img src="{{ asset($book->produk) }}" alt="Product Image"></a>
-                    </div>
-                    <div class="detail-box">
-                        <h6>{{ $book->judul_buku }}</h6>
-                        <h6>
-                            Harga
-                            <span>{{ number_format($book->harga, 0, ',', '.') }}</span>
-                        </h6>
-                    </div>
-                    <div class="new">
-                        <span>New</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-        @endforeach
-    </div>
-    @endauth
-    
-
-      <div class="btn-box">
         @auth
-              Selamat Berbelanja
+        <div class="row">
+            @foreach($books as $book)
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="box">
+                    <a href="{{ route('pembelian', ['id' => $book->id]) }}">
+                        <div class="img-box">
+                            <img src="{{ asset($book->produk) }}" alt="Product Image">
+                        </div>
+                        <div class="detail-box">
+                            <h6>{{ $book->judul_buku }}</h6>
+                            <h6>
+                                Harga
+                                <span>{{ number_format($book->harga, 0, ',', '.') }}</span>
+                            </h6>
+                        </div>
+                        <div class="new">
+                            <span>New</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            @endforeach
+        </div>
         @else
-            <a href="{{ route('login') }}">
-              Belanja Sekarang
-            </a>
+        <div class="row">
+            @foreach($books as $book)
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="box">
+                    <a href="{{ route('login') }}">
+                        <div class="img-box">
+                            <img src="{{ asset($book->produk) }}" alt="Product Image">
+                        </div>
+                        <div class="detail-box">
+                            <h6>{{ $book->judul_buku }}</h6>
+                            <h6>
+                                Harga
+                                <span>{{ number_format($book->harga, 0, ',', '.') }}</span>
+                            </h6>
+                        </div>
+                        <div class="new">
+                            <span>New</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            @endforeach
+        </div>
         @endauth
+
+        <div class="btn-box">
+            @auth
+                Selamat Berbelanja
+            @else
+                <a href="{{ route('login') }}">
+                  Belanja Sekarang
+                </a>
+            @endauth
+        </div>
     </div>
-    
-    </div>
-  </section>
+</section>
+
 
   <!-- end shop section -->
 
