@@ -12,12 +12,11 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
   <link rel="shortcut icon" href="{{ asset('home/images/fav.png') }}" type="image/x-icon">
+</head>
 
   <title>
     SofiBook
   </title>
-
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -31,7 +30,7 @@
   <link rel="stylesheet" href="{{ asset('home/css/responsive.css') }}">
 </head>
 
-  <body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
+  <body>
   
     <div class="hero_area">
         <!-- header section strats -->
@@ -238,8 +237,7 @@
 </script>
 
 <!-- Bootstrap JS and dependencies (jQuery) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
 <script src="{{ asset('home/js/jquery-3.4.1.min.js') }}"></script>
 <script src="{{ asset('home/js/bootstrap.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
