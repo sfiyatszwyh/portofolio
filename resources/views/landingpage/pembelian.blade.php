@@ -17,6 +17,8 @@
     SofiBook
   </title>
 
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
@@ -123,7 +125,9 @@
                                                         </tr>
                                                     </table>
                                                     <div class="d-flex justify-content-center align-items-center">
-                                                        <button style="margin: 25px 0px" type="button" class="btn btn-outline-secondary shadow-none" onclick="history.back()">Kembali</button>
+                                                        <div class="d-flex justify-content-center align-items-center">
+                                                            <button style="margin: 25px 0px" type="button" class="btn btn-outline-secondary shadow-none" data-toggle="modal" data-target="#cancel-payment-modal">Kembali</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -160,12 +164,12 @@
                                                                         <label for="metode_pembayaran" class="form-label fw-bold">Metode Pembayaran</label>
                                                                         <select class="form-select" aria-label="Default select example" name="metode_pembayaran">
                                                                             <option selected disabled>Pilih Metode Pembayaran</option>
-                                                                            <option value="BNI">BNI</option>
+                                                                            <option value="BRI">BRI</option>
                                                                             <option value="BCA">BCA</option>
                                                                         </select>
                                                                     </div>
                                                                     <div class="col-md-12 d-flex justify-content-between">
-                                                                        <button type="button" class="btn btn-outline-secondary shadow-none" data-bs-toggle="modal" data-bs-target="#cancel-payment">Cancel</button>
+                                                                        <button type="button" class="btn btn-outline-secondary shadow-none" data-toggle="modal" data-target="#cancel-payment-modal">Cancel</button>
                                                                         <button type="submit" class="btn btn-outline-success shadow-none">Buat Pesanan</button>
                                                                     </div>
                                                                 </div>
@@ -183,23 +187,27 @@
                 </div>
             </section>
         
-            <div class="modal fade" id="cancel-payment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Konfirmasi Batal Pemesanan</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            Apakah anda yakin untuk keluar dari halaman pembayaran? Data yang telah diinputkan akan hilang!
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary shadow-none" data-bs-dismiss="modal">Batal</button>
-                            <a href="/" class="btn btn-success text-white shadow-none">Yakin</a>
-                        </div>
-                    </div>
-                </div>
+            <!-- Modal Konfirmasi Batal Pemesanan -->
+<div class="modal fade" id="cancel-payment-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Konfirmasi Batal Pemesanan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
+            <div class="modal-body">
+                Apakah anda yakin untuk keluar dari halaman pembayaran? Data yang telah diinputkan akan hilang!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary shadow-none" data-dismiss="modal">Batal</button>
+                <a href="/" class="btn btn-success text-white shadow-none">Yakin</a>
+            </div>
+        </div>
+    </div>
+</div>
+
         </main>
         
   
@@ -229,6 +237,9 @@
     }
 </script>
 
+<!-- Bootstrap JS and dependencies (jQuery) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 <script src="{{ asset('home/js/jquery-3.4.1.min.js') }}"></script>
 <script src="{{ asset('home/js/bootstrap.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
