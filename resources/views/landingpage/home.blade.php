@@ -78,7 +78,7 @@
             </a>
           </div>
           @else
-          <a href="/logout">{{ auth()->user()->name }}</a>
+          <a href="/logout"> <i class="fa fa-user" aria-hidden="true"></i> {{ auth()->user()->name }}</a>
           @endif
         </div>
       </nav>
@@ -192,54 +192,55 @@
         </h2>
       </div>
       @auth
-  <div class="row">
-    @foreach($books as $book)
-    <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="box">
-            <a href="{{ route('pembelian') }}">
-                <div class="img-box">
-                  <img src="{{ Storage::url($book->produk) }}" alt="Product Image"></a>
-                </div>
-                <div class="detail-box">
-                    <h6>{{ $book->judul_buku }}</h6>
-                    <h6>
-                        Harga
-                        <span>{{ number_format($book->harga, 0, ',', '.') }}</span>
-                    </h6>
-                </div>
-                <div class="new">
-                    <span>New</span>
-                </div>
-            </a>
+      <div class="row">
+        @foreach($books as $book)
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="box">
+                <a href="{{ route('pembelian') }}">
+                    <div class="img-box">
+                      <img src="{{ asset($book->produk) }}" alt="Product Image"></a>
+                    </div>
+                    <div class="detail-box">
+                        <h6>{{ $book->judul_buku }}</h6>
+                        <h6>
+                            Harga
+                            <span>{{ number_format($book->harga, 0, ',', '.') }}</span>
+                        </h6>
+                    </div>
+                    <div class="new">
+                        <span>New</span>
+                    </div>
+                </a>
+            </div>
         </div>
+        @endforeach
     </div>
-    @endforeach
-</div>
-@else
-<div class="row">
-    @foreach($books as $book)
-    <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="box">
-            <a href="{{ route('login') }}">
-                <div class="img-box">
-                  <img src="{{ Storage::url($book->produk) }}" alt="Product Image"></a>
-                </div>
-                <div class="detail-box">
-                    <h6>{{ $book->judul_buku }}</h6>
-                    <h6>
-                        Harga
-                        <span>{{ number_format($book->harga, 0, ',', '.') }}</span>
-                    </h6>
-                </div>
-                <div class="new">
-                    <span>New</span>
-                </div>
-            </a>
+    @else
+    <div class="row">
+        @foreach($books as $book)
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="box">
+                <a href="{{ route('login') }}">
+                    <div class="img-box">
+                      <img src="{{ asset($book->produk) }}" alt="Product Image"></a>
+                    </div>
+                    <div class="detail-box">
+                        <h6>{{ $book->judul_buku }}</h6>
+                        <h6>
+                            Harga
+                            <span>{{ number_format($book->harga, 0, ',', '.') }}</span>
+                        </h6>
+                    </div>
+                    <div class="new">
+                        <span>New</span>
+                    </div>
+                </a>
+            </div>
         </div>
+        @endforeach
     </div>
-    @endforeach
-</div>
-@endauth
+    @endauth
+    
 
       <div class="btn-box">
         @auth

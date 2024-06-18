@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Storage;
 
 class BookController extends Controller
 {
@@ -32,18 +31,22 @@ class BookController extends Controller
         $book->stok = $request->stok;
 
         if ($request->hasFile('produk')) {
-            $book->produk = $request->file('produk')->store('public/buku');
+            $filename = time() . '_' . $request->file('produk')->getClientOriginalName();
+            $request->file('produk')->move(public_path('buku'), $filename);
+            $book->produk = 'buku/' . $filename;
         }
 
         $book->save();
 
         return redirect()->route('data')->with('success', 'Data buku berhasil ditambahkan');
     }
-    public function index () {
-        $books = Book::all() ;
+
+    public function index()
+    {
+        $books = Book::all();
         return view('dashboard.data', compact('books'));
-        }
-    
+    }
+
     public function edit($id)
     {
         $book = Book::findOrFail($id);
@@ -52,7 +55,7 @@ class BookController extends Controller
 
     public function update(Request $request, $id)
     {
-        // Validate data
+        // Validasi data
         $request->validate([
             'judul_buku' => 'required|string|max:255',
             'harga' => 'required|integer',
@@ -67,12 +70,14 @@ class BookController extends Controller
         $book->stok = $request->stok;
 
         if ($request->hasFile('produk')) {
-            // Delete old file
-            if ($book->produk) {
-                Storage::delete($book->produk);
+            // Hapus file lama
+            if ($book->produk && file_exists(public_path($book->produk))) {
+                unlink(public_path($book->produk));
             }
-            // Store new file
-            $book->produk = $request->file('produk')->store('public/buku');
+            // Simpan file baru
+            $filename = time() . '_' . $request->file('produk')->getClientOriginalName();
+            $request->file('produk')->move(public_path('buku'), $filename);
+            $book->produk = 'buku/' . $filename;
         }
 
         $book->save();
@@ -84,9 +89,9 @@ class BookController extends Controller
     {
         $book = Book::findOrFail($id);
 
-        // Delete associated file if exists
-        if ($book->produk) {
-            Storage::delete($book->produk);
+        // Hapus file terkait jika ada
+        if ($book->produk && file_exists(public_path($book->produk))) {
+            unlink(public_path($book->produk));
         }
 
         $book->delete();

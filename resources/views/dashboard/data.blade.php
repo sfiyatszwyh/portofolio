@@ -177,32 +177,30 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tbody>
-                          @forelse ($books as $book)
-                              <tr>
-                                  <td>{{ $loop->iteration }}</td>
-                                  <td>{{ $book->judul_buku }}</td>
-                                  <td><img src="{{ Storage::url($book->produk) }}" alt="Produk Image" style="max-width: 100px; max-height: 100px;">
-                                  </td>
-                                  <td>{{ $book->stok }}</td>
-                                  <td>{{ $book->harga }}</td>
-                                  <td>
-                                      <!-- Example action buttons -->
-                                      <a href="{{ route('edit-book', $book->id) }}" class="btn btn-sm btn-primary">Edit</a>
-                                      <form action="{{ route('delete-book', $book->id) }}" method="POST" style="display:inline-block;">
-                                          @csrf
-                                          @method('DELETE')
-                                          <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-                                      </form>
-                                  </td>
-                              </tr>
-                          @empty
-                              <tr>
-                                  <td colspan="6" class="text-center">No entries found</td>
-                              </tr>
-                          @endforelse
-                      </tbody>
-                    </tbody>
+                      @forelse ($books as $book)
+                          <tr>
+                              <td>{{ $loop->iteration }}</td>
+                              <td>{{ $book->judul_buku }}</td>
+                              <td><img src="{{ asset($book->produk) }}" alt="Produk Image" style="max-width: 100px; max-height: 100px;"></td>
+                              <td>{{ $book->stok }}</td>
+                              <td>{{ $book->harga }}</td>
+                              <td>
+                                  <!-- Example action buttons -->
+                                  <a href="{{ route('edit-book', $book->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                  <form action="{{ route('delete-book', $book->id) }}" method="POST" style="display:inline-block;">
+                                      @csrf
+                                      @method('DELETE')
+                                      <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                  </form>
+                              </td>
+                          </tr>
+                      @empty
+                          <tr>
+                              <td colspan="6" class="text-center">No entries found</td>
+                          </tr>
+                      @endforelse
+                  </tbody>
+                  
                   </table>
                   
                   </div>
